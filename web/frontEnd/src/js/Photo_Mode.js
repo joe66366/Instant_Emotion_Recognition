@@ -7,8 +7,8 @@ var Situation_data=["關閉聲音","開啟聲音","關閉文字","開啟文字",
 var subscriptionKey="";
 var uriBase = "";
 
-// subscriptionKey =readTxt("../src/keyCode.txt");
-// uriBase = readTxt("../src/endPoint.txt");
+subscriptionKey =readTxt("../src/keyCode.txt");
+uriBase = readTxt("../src/endPoint.txt");
 var synth = window.speechSynthesis;
 var videoElement = document.querySelector('video');
 var voices=[];
