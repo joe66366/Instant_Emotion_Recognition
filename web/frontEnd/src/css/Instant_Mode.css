@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+}
+.center{
+  position: absolute;
+  left: 50%;
+  /*top: 50%;*/
+  transform: translate(-50%, -0%);
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items:stretch;
+  justify-content: space-between;
+}
+    
+body{
+    background-color: black;
+    font-family:'Roboto',sans-serif;
+    touch-action: auto;
+}
+/*
+.Page{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items:stretch;
+  justify-content: space-between;
+}
+*/
+
+.Block{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:stretch;
+  justify-content:center;
+  padding: 10px 20px 10px 20px;
+
+  background-color: black;
+  /* color: white; */
+  border: 2px;
+  margin: 20px;
+  padding: 50px 20px 50px 20px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: space-around;
+}
+
+:focus {
+    outline: 3px solid gray;   
+}
+
+h1{
+    color: white;
+    font-size: 8vmax;
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    color: white;
+    font-size: 5vmax;
+    font-weight: bold;
+    text-align: center;
+}
+h3{
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+}
+/* RESPONSIVE ARROWS */
+[class^=arr-]{
+    border:solid white;
+    border-width:0 1.0em 1.0em 0;
+    display:inline-block;
+    padding:3vw;
+    margin: 0 auto
+}
+.arr-up    {
+    transform:rotate(-135deg);
+}
+/*
+.arr-down  {
+    transform:rotate(45deg);
+}
+*/
+
+/* Button */
+a.button1{
+  cursor: pointer;
+	
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-size: 5vw;
+  font-weight:bold;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+}
+/*
+a.button1:hover,a.button:active{ // active not working
+  text-decoration:underline;
+  color:#000000;
+  background-color:#FFFFFF;
+}
+*/
+
+/*
+@media all and (max-width:30em){
+ a.button1{
+  display:block;
+  margin:0.4em auto;
+}
+}
+*/
+
+/* Color Button */
+a.colorButton{
+  position:relative;/*test*/
+  cursor: pointer;
+  display:inline-block;
+  padding:3em;/* padding:0.3em 1.2em; */
+  margin:0 0.1em 0.1em 0;
+  border:0.16em solid rgba(255,255,255,0);
+  border-radius:2em;
+  border-width: 4pt;
+  border-color: white;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align:center;
+  transition: all 0.2s;
+}
+/*
+a.colorButton:after{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: '√';
+  opacity: 0;
+}
+*/
+/*
+a.colorButton:hover,a.colorButton:active{ // change while seect
+  border-color: rgba(255,255,255,1);
+}
+a.colorBuuton:hover:after, a.colorButton:active:after {
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
+
+
+/*
+@media all and (max-width:30em){
+ a.colorButton{
+  display:block;
+  margin:0.2em auto;
+}
+}
+*/
+
+/* Slider */
+.slidecontainer {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: space-around;
+}
+
+.slider {
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background:white;
+  outline: none;
+  opacity: 1;
+  /* -webkit-transition: .2s; */
+  /* transition: opacity .2s; */
+}
+
+.slider:hover, .slider:active {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5em;/*23*/
+  height: 5em;
+  border: 0;
+  background: white;/* #d4bfbf */
+  cursor: pointer;
+}
+
+/*
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background:url('contrasticon.png');
+  cursor: pointer;
+}
+*/
+
+/* The Modal (background) */
+.modal {
+  /*
+  width: 480px;
+  height: 640px;
+  */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  /*z-index: 1; // Sit on top */
+  left: 50%;
+  /*top: 50%;*/
+  bottom:10vh;
+  transform: translate(-50%);
+  /* 
+  left: 0;
+  top: 0;
+  */
+  width: 90vw; /* Full width */
+  height: 70vh; /* Full height */
+  /*overflow: auto;*/ /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  /*
+  background-color: rgba(0,0,0,0.4); // Black w/ opacity 
+  */
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  left: 50%;
+  bottom:10vh;
+  /*transform: translate(-50%, -50%);*/
+  transform: translate(-50%);
+  /*bottom: 0;*/
+  background-color: #fefefe;
+  height: 70vh;
+  width: 90vw;
+}
+
+/* The Close Button */
+.close {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  left: 50%;
+  /*top: 50%;*/
+  transform: translate(-50%, -0%);
+  /*float: right;*/
+  font-size: 8em;
+  font-weight: bold;
+}
+
+.close:hover,.close:active,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px;
+  text-align: center;
+  background-color: black;
+  /*color: white;*/
+}
+
+.modal-body {
+  padding: 2px;
+  overflow: auto;
+  overflow-y:scroll;
+  height: 40vh;
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  position:absolute;
+  /*height: 15vh;*/
+  bottom: 0%;
+  width: 90vw;
+  padding: 2px 16px;
+  background-color: black;
+}
+
+/*mobile phone(portrait)*/
+@media all and (orientation:landscape){
+
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) and (orientation:portrait){ 
+
+}
+/*mobile phone(landscape)*/
+@media only screen and (min-width: 0px) and (max-width: 768px) and (orientation:landscape){ 
+
+}
+/* For Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+/* iPad Pro: 1024*1366*//* Desktop */
+@media screen and (min-width: 1024px){
+
+}
