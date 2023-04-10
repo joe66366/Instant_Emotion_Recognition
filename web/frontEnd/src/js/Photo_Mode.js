@@ -5,7 +5,7 @@ var Mood_data=["生氣","鄙視","厭惡","害怕","開心","中性","傷心","�
 var Situation_data=["關閉聲音","開啟聲音","關閉文字","開啟文字","手動點選模式","自動辨識模式",
 "總共辨識到:","個人，從右到左的表情分別是:","請再試一次","請輸入檔案名稱"];
 var subscriptionKey =readTxt("../src/keyCode.txt");
-var uriBase = readTxt("../src/endPoint.txt);
+var uriBase = readTxt("../src/endPoint.txt");
 
 var synth = window.speechSynthesis;
 var videoElement = document.querySelector('video');
