@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Control Panel</title>
+<style>
+*{
+    box-sizing: border-box;
+}
+.center{
+  position: absolute;
+  left: 50%;
+  /*top: 50%;*/
+  transform: translate(-50%, -0%);
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items:stretch;
+  justify-content: space-between;
+}
+    
+body{
+    background-color: black;
+    font-family:'Roboto',sans-serif;
+    touch-action: auto;
+}
+/*
+.Page{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items:stretch;
+  justify-content: space-between;
+}
+*/
+
+.Block{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:stretch;
+  justify-content:center;
+  padding: 10px 20px 10px 20px;
+
+  background-color: black;
+  /* color: white; */
+  border: 2px;
+  margin: 20px;
+  padding: 50px 20px 50px 20px;
+}
+
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: space-around;
+}
+:focus {
+    outline: 3px solid gray;   
+}
+h1{
+    color: white;
+    font-size: 8vmax;
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    color: white;
+    font-size: 5vmax;
+    font-weight: bold;
+    text-align: center;
+}
+h3{
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+}
+/* RESPONSIVE ARROWS */
+[class^=arr-]{
+    border:solid white;
+    border-width:0 1.0em 1.0em 0;
+    display:inline-block;
+    padding:3vw;
+    margin: 0 auto
+}
+.arr-up    {
+    transform:rotate(-135deg);
+}
+/*
+.arr-down  {
+    transform:rotate(45deg);
+}
+*/
+
+/* Button */
+a.button1{
+  cursor: pointer;
+	
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-size: 4vw;
+  font-weight:bold;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+}
+/*
+a.button1:hover,a.button:active{ // active not working
+  text-decoration:underline;
+  color:#000000;
+  background-color:#FFFFFF;
+}
+*/
+
+/*
+@media all and (max-width:30em){
+ a.button1{
+  display:block;
+  margin:0.4em auto;
+}
+}
+
+@media all and (max-width:30em){
+ a.colorButton{
+  display:block;
+  margin:0.2em auto;
+}
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+  /*
+  width: 480px;
+  height: 640px;
+  */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  /*z-index: 1; // Sit on top */
+  left: 50%;
+  /*top: 50%;*/
+  bottom:10vh;
+  transform: translate(-50%);
+  /* 
+  left: 0;
+  top: 0;
+  */
+  width: 90vw; /* Full width */
+  height: 70vh; /* Full height */
+  /*overflow: auto;*/ /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  /*
+  background-color: rgba(0,0,0,0.4); // Black w/ opacity 
+  */
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  left: 50%;
+  bottom:10vh;
+  /*transform: translate(-50%, -50%);*/
+  transform: translate(-50%);
+  /*bottom: 0;*/
+  background-color: #fefefe;
+  height: 70vh;
+  width: 90vw;
+}
+
+.modal-header {
+  padding: 2px;
+  text-align: center;
+  background-color: black;
+  /*color: white;*/
+}
+
+.modal-body {
+  padding: 2px;
+  overflow: auto;
+  overflow-y:scroll;
+  height: 40vh;
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  position:absolute;
+  /*height: 15vh;*/
+  bottom: 0%;
+  width: 90vw;
+  padding: 2px 16px;
+  background-color: black;
+}
+
+/*mobile phone(portrait)*/
+@media all and (orientation:landscape){
+
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) and (orientation:portrait){ 
+
+}
+/*mobile phone(landscape)*/
+@media only screen and (min-width: 0px) and (max-width: 768px) and (orientation:landscape){ 
+
+}
+/* For Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+/* iPad Pro: 1024*1366*//* Desktop */
+@media screen and (min-width: 1024px){
+
+}
+
+</style>
+</head>
+<body id="body">
+<div class="center" id="fullpage">
+	<div class="Block" id="Title">
+		<h1 id="t1">尋找你的 Dr.Mood</h1>
+    </div> 
+    <div class="Block" id="Intro">
+		<h3 id="t2"><nobr>為甚麼要使用「尋找你的Dr. Mood」?</nobr></h3>
+		<h3 id="t3" style="white-space: pre-line">
+        「尋找你的Dr. Mood」可以將七種從臉部表情上可偵測的基本情緒轉換成語音及文字輸出。
+        我們的服務可以透過辨識他人表情幫助您了解他人的情緒。
+		</h3>
+    </div>
+	<div class="Block"  style="padding: 0.5em 0.5em 0.5em 0.5em" id="Intro">
+		<a class="button1" id="PhotoButton" style="padding: 0.5em 0.5em 0.5em 0.5em">進行圖片辨識<br>(Use Photo)</a>
+	</div>
+	<div class="Block"  style="padding: 0.5em 0.5em 0.5em 0.5em" id="Intro">
+		<a class="button1" id="VideoButton" style="padding: 0.5em 0.5em 0.5em 0.5em">進行現場辨識<br>(Use Camera)</a>
+	</div>
+</div>
+<script>
+var P_btn = document.getElementById("PhotoButton");
+var V_btn = document.getElementById("VideoButton");
+
+P_btn.onclick = function() {
+	url = "./page/photo_Mode.html";//此處拼接內容
+	window.location.href = url;
+}
+V_btn.onclick = function() {
+	url = "./page/Instant_Mode.html";//此處拼接內容
+	window.location.href = url;
+}
+</script>
+</body>
+</html>
