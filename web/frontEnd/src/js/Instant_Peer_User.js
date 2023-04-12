@@ -436,8 +436,8 @@ function dataURItoBlob(dataURI) {
 
 function do_recognize(){
 		// Request parameters
-		subscriptionKey =readTxt("../src/keyCode.txt");
-		uriBase = readTxt("../src/endPoint.txt");
+// 		subscriptionKey =readTxt("../src/keyCode.txt");
+// 		uriBase = readTxt("../src/endPoint.txt");
 		var params = 
 			{
 				"detectionModel": "detection_01",
