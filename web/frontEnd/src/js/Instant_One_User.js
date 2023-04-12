@@ -256,6 +256,14 @@ async function savefile(src,name){
   
   }
 
+function readTxt(file) {
+  fetch(file).then(function(response) {
+  response.text().then(function(text) {
+		return text;
+  });
+});
+}
+
 function do_cutcloth(data){
 	const video = document.getElementById('demo-video');
 	var canvas2 = document.getElementById('myCanvas2');
