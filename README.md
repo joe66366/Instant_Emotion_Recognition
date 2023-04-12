@@ -15,6 +15,6 @@
 •  請更改「web/frontEnd/src/endPoint.txt」將其內容修改為自身EndPoint
 
 ### 範例網頁
-  [DEMO](https://joe66366.github.io/Instant_Emotion_Recognition/)
+  [尋找你的Dr.Mood](https://joe66366.github.io/Instant_Emotion_Recognition/)
 
 
