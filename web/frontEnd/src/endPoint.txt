@@ -1,1 +1,1 @@
-https://gyliao001.cognitiveservices.azure.com/face/v1.0/detect
+
