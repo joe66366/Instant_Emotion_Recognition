@@ -8,4 +8,9 @@
 
 •  獲得「2021全國大專校院智慧創新暨跨域整合創作競賽」值得注目獎
 
+### 使用說明
+
+•  請更改「web/frontEnd/src/keyCode.txt」將其內容修改為自身Azure金鑰
+
+•  請更改「web/frontEnd/src/endPoint.txt」將其內容修改為自身Azure金鑰
 
