@@ -12,5 +12,8 @@
 
 •  請更改「web/frontEnd/src/keyCode.txt」將其內容修改為自身Azure金鑰
 
-•  請更改「web/frontEnd/src/endPoint.txt」將其內容修改為自身Azure金鑰
+•  請更改「web/frontEnd/src/endPoint.txt」將其內容修改為自身EndPoint
+
+### 範例網頁
+  ![DEMO][https://joe66366.github.io/Instant_Emotion_Recognition/]
 
