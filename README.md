@@ -18,4 +18,4 @@
 - [尋找你的Dr.Mood](https://joe66366.github.io/Instant_Emotion_Recognition/)
 ### 系統畫面
 
-  ![ler_01](https://joe66366.github.io/Instant_Emotion_Recognition/)
+  ![ler_01](https://github.com/joe66366/Instant_Emotion_Recognition/blob/main/Ier_01.jpg)
