@@ -382,6 +382,8 @@ function dataURItoBlob(dataURI) {
 function do_recognize(){
 // 		subscriptionKey =readTxt("../src/keyCode.txt");
 // 		uriBase = readTxt("../src/endPoint.txt");
+		subscriptionKey ="3dfd4badf7564183af6f177016126e1a";
+		uriBase ="https://test.cognitiveservices.azure.com/face/v1.0/detect"
 		// Request parameters
 		var params = 
 			{
