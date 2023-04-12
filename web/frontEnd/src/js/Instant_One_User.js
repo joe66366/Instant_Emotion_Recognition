@@ -458,7 +458,7 @@ function do_recognize(){
 					"" : (jQuery.parseJSON(jqXHR.responseText).message) ?
 						jQuery.parseJSON(jqXHR.responseText).message :
 						jQuery.parseJSON(jqXHR.responseText).error.message;
-				alert("key與EndPoint錯誤，請重新輸入");
+				alert("key與EndPoint錯誤，無法連接後台");
 			});
   
 			// Perform the REST API call.
