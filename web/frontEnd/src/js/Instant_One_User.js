@@ -21,6 +21,8 @@ var Situation_data=["Turn off the sound","Turn on the sound","Turn off the text"
 "Manual click mode","Automatic recognition mode","I have identified a total of ",
 "people,The emoticons from right to left are ","try again","Please enter the file name"];
 var utterThis = new SpeechSynthesisUtterance("");
+var subscriptionKey = "3dfd4badf7564183af6f177016126e1a";
+var uriBase = "https://gyliao001.cognitiveservices.azure.com/face/v1.0/detect";
 synth.speak(utterThis);
 
 //下面change_camera 和 change_mode要移到前面  function要多加window
@@ -371,8 +373,6 @@ function dataURItoBlob(dataURI) {
 }
 
 function do_recognize(){
-		var subscriptionKey = "3dfd4badf7564183af6f177016126e1a";
-		var uriBase = "https://gyliao001.cognitiveservices.azure.com/face/v1.0/detect";
 		// Request parameters
 		var params = 
 			{
@@ -380,21 +380,6 @@ function do_recognize(){
 				"returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
 				"returnFaceId": "true"
 			};
-
-			// Display the image.
-			
-			//var sourceImageUrl="";
-			//var sourceImageUrl="https://cdn2-digiphoto.techbang.com/system/excerpt_images/9479/front/943a4a17f8e228ed214410440515de87.jpg?1497518222";
-		
-			/*var blobBin = window.atob(qq.split(',')[1]);
-			var buf = new ArrayBuffer(blobBin.length);
-			alert(byteArr)*/
-			//var sourceImageUrls=dataURItoBlob(qq);
-			//var reader = new FileReader();
-			//var tt="";
-			//reader.readAsBinaryString(sourceImageUrls);//讀取blob內容
-			//reader.onloadend=function(){	
-				//tt=reader.result;
 		var getsrc = document.getElementById("myCanvas").src;
 		$.ajax({
 			url: uriBase + "?" + $.param(params),
@@ -473,7 +458,7 @@ function do_recognize(){
 					"" : (jQuery.parseJSON(jqXHR.responseText).message) ?
 						jQuery.parseJSON(jqXHR.responseText).message :
 						jQuery.parseJSON(jqXHR.responseText).error.message;
-				alert(errorString);
+				alert("key與EndPoint錯誤，請重新輸入");
 			});
   
 			// Perform the REST API call.
