@@ -380,8 +380,8 @@ function dataURItoBlob(dataURI) {
 }
 
 function do_recognize(){
-		subscriptionKey =readTxt("../src/keyCode.txt");
-		uriBase = readTxt("../src/endPoint.txt");
+// 		subscriptionKey =readTxt("../src/keyCode.txt");
+// 		uriBase = readTxt("../src/endPoint.txt");
 		// Request parameters
 		var params = 
 			{
