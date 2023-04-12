@@ -83,6 +83,8 @@ function dataURItoBlob(dataURI) {
 function do_recognize(){
 
 		// Request parameters
+		subscriptionKey ="3dfd4badf7564183af6f177016126e1a";
+		uriBase ="https://test.cognitiveservices.azure.com/face/v1.0/detect"
 		var params = 
 			{
 				"detectionModel": "detection_01",
