@@ -24,8 +24,6 @@ var utterThis = new SpeechSynthesisUtterance("");
 var subscriptionKey = "";
 var uriBase = "";
 synth.speak(utterThis);
-subscriptionKey =readTxt("../src/keyCode.txt");
-uriBase = readTxt("../src/endPoint.txt");
 //下面change_camera 和 change_mode要移到前面  function要多加window
 window.change_Camera=function change_Camera(){
 	var constraints;
@@ -382,6 +380,8 @@ function dataURItoBlob(dataURI) {
 }
 
 function do_recognize(){
+		subscriptionKey =readTxt("../src/keyCode.txt");
+		uriBase = readTxt("../src/endPoint.txt");
 		// Request parameters
 		var params = 
 			{
