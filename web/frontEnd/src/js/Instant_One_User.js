@@ -21,10 +21,11 @@ var Situation_data=["Turn off the sound","Turn on the sound","Turn off the text"
 "Manual click mode","Automatic recognition mode","I have identified a total of ",
 "people,The emoticons from right to left are ","try again","Please enter the file name"];
 var utterThis = new SpeechSynthesisUtterance("");
-var subscriptionKey = "3dfd4badf7564183af6f177016126e1a";
-var uriBase = "https://gyliao001.cognitiveservices.azure.com/face/v1.0/detect";
+var subscriptionKey = "";
+var uriBase = "";
 synth.speak(utterThis);
-
+subscriptionKey =readTxt("../src/keyCode.txt");
+uriBase = readTxt("../src/endPoint.txt");
 //下面change_camera 和 change_mode要移到前面  function要多加window
 window.change_Camera=function change_Camera(){
 	var constraints;
@@ -458,7 +459,7 @@ function do_recognize(){
 					"" : (jQuery.parseJSON(jqXHR.responseText).message) ?
 						jQuery.parseJSON(jqXHR.responseText).message :
 						jQuery.parseJSON(jqXHR.responseText).error.message;
-				alert("key與EndPoint錯誤，無法連接後台");
+				alert("key與EndPoint設定錯誤，無法連接後台");
 			});
   
 			// Perform the REST API call.
